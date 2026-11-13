@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>agente de viajes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contenedor-principal">
+    <!-- Estructura fiel al boceto: zona de chat arriba y zona de escritura abajo -->
+    <section id="zona-de-chat" class="zona-de-chat" aria-label="zona de chat" aria-live="polite">
+      <div class="mensaje agente">
+        <span class="autor">agente de viajes</span>
+        <p class="texto">¡Hola! Soy tu agente de viajes. Contame qué tipo de destino buscás, tu presupuesto o época del año y te recomiendo lugares ideales en todo el mundo.</p>
+      </div>
+    </section>
+
+    <form id="zona-de-escritura" class="zona-de-escritura" aria-label="zona de escritura">
+      <div class="grupo-entrada">
+        <input
+          type="text"
+          id="entrada-mensaje"
+          class="entrada-mensaje"
+          placeholder="Escribí tu consulta de viaje..."
+          maxlength="500"
+          autocomplete="off"
+          required
+          aria-label="Mensaje para el agente de viajes"
+        >
+        <span id="contador-caracteres" class="contador-caracteres">0/500</span>
+      </div>
+      <button type="submit" id="boton-enviar" class="boton-enviar">Enviar</button>
+    </form>
+  </main>
+
+  <!-- Carga obligatoria de config.js antes que script.js -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
